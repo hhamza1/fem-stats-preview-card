@@ -11,6 +11,63 @@
     font-family: 'Inter', sans-serif;;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-background);
+    color: var(--heading-stats-color);
+    padding: 65px 25px;
+    height: 100vh;
+}
+
+.card-component {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-info {
+    padding: 22px 35px;
+    text-align: center;
+    
+}
+
+picture, source, img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-paragraph {
+    color: var(--main-paragraph);
+    font-size: .95rem;
+    line-height: 25px;
+}
+
+.card-title {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-title > span {
+    color: var(--violet-accent);
+}
+
+.stat {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 1.33rem;
+    font-weight: 700;
+}
+
+.stat > span {
+    color: var(--stat-headings);
+    display: block;
+    text-transform: uppercase;
+    font-size: .667rem;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
 
 
 .stats {
@@ -21,5 +78,5 @@
 
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; padding-bottom: 10px;}
 .attribution a { color: hsl(228, 45%, 44%); }
