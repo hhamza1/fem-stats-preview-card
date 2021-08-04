@@ -36,6 +36,32 @@ picture, source, img {
     border-top-right-radius: 10px;
 }
 
+.img-container {
+    position: relative;
+    background-color: black;
+    
+}
+
+img {
+    height: 100%;
+    opacity: .5;
+}
+
+.img-container::after {
+    content: '';
+    background: var(--violet-accent);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: .25;
+}
+
+
 .card-paragraph {
     color: var(--main-paragraph);
     font-size: .95rem;
@@ -73,9 +99,73 @@ picture, source, img {
     font-family: 'Lexend Deca', sans-serif;
 }
 
-
-
-
-
 .attribution { font-size: 11px; text-align: center; padding-bottom: 10px;}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/*================ Desktop View ============================*/
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 0;
+    }
+
+
+    .card-component {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-self: center;
+        max-width: 1110px;
+    }
+
+    .img-container{
+        order: 2;
+        justify-self: stretch;
+        flex: 0 1 80%;
+    }
+
+    picture, source, img {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+    }
+
+    .img-container, .img-container::after {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .img-container > img {
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    .card-info {
+        order: 1;
+        align-self: center;
+        text-align: left;
+        max-width: 420px;
+    }
+
+    .card-info > h2 {
+        padding-left: 0;
+        font-size: 1.875rem;
+    }
+
+
+    .stats {
+        display: flex;
+        justify-content: flex-start;
+        grid-gap: calc((100% - 120px)/3);
+        align-content: stretch;
+    }
+
+}
